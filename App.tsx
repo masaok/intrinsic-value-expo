@@ -4,6 +4,7 @@ import { StyleSheet, StatusBar } from 'react-native'
 import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context'
 
 import HomeScreen from './src/screens/HomeScreen'
+import { ExpoWebBrowserUsage } from './src/examples/browsers/ExpoWebBrowserUsage'
 
 const styles = StyleSheet.create({
   container: {
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <HomeScreen />
+      {/* <ExpoWebBrowserUsage /> */}
     </SafeAreaProvider>
   )
 }

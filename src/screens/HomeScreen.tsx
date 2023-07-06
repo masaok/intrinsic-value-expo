@@ -30,7 +30,11 @@ const styles = StyleSheet.create({
 
 // const URL = DEV_URL
 
-let URL = 'https://intrinsic-value-web.vercel.app/examples/realm'
+let URL = ''
+// URL = 'https://intrinsic-value-web.vercel.app/examples/email'
+URL = 'https://intrinsic-value-web.vercel.app/examples/realm'
+// URL = 'https://react-oauth.vercel.app/'
+URL = 'https://hangry-web.vercel.app/examples/firebase'
 
 // const URL = __DEV__ ? DEV_IP_URL : PROD_URL
 // const URL = PROD_URL
@@ -48,7 +52,12 @@ const HomeScreen = () => {
         paddingBottom: insets.bottom,
       }}
     >
-      <WebView style={styles.webview} source={{ uri: URL }} />
+      <WebView
+        style={styles.webview}
+        source={{ uri: URL }}
+        // This override will get you to the Google user name form, but the next page is still blocked
+        userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+      />
     </View>
   )
 }
